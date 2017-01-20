@@ -10,6 +10,7 @@ The expectation of input are a series of genes that have been aligned and for wh
 
 ## Usage
 With the input of a directory of gene alignments and corresponding gene trees, the steps of these analyses include 
+
 1. Get the tip-to-root variation with the `get_var_length.py`
 
 ### Rooting
