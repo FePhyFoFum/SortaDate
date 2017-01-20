@@ -12,6 +12,9 @@ The expectation of input are a series of genes that have been aligned and for wh
 With the input of a directory of gene alignments and corresponding gene trees, the steps of these analyses include 
 
 1. Get the tip-to-root variation with the `get_var_length.py`
+2. Get the bipartition support with `get_bp_genetrees.py`
+
+These steps are separated out with the intention that you can examine the results of each step. 
 
 ### Rooting
 If you need trees to be rooted, you can perform this in many different ways. One way that you can root these trees is with `phyx` (found [https://github.com/FePhyFoFum/phyx][1]). 
