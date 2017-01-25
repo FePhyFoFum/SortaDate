@@ -22,7 +22,12 @@ These steps are separated out with the intention that you can examine the result
 To install and use SortaDate you will need python (it is probably already on your computer if you have a Mac or Linux machine) and you will need two programs from the `phyx` set of programs (found [https://github.com/FePhyFoFum/phyx][1]). While `phyx` has many different programs, we will only need 2 and to install these, you will not need any other software other than a compiler. Because you can install only part of the `phyx` package, instructions for this will be placed here. If you would like to install all of the programs, consult the `phyx` website. 
 
 ### Installing pxlstr and pxbp
-The two bits that you will need from `phyx` are `pxlstr` and `pxbp`. To install this in Mac
+The two bits that you will need from `phyx` are `pxlstr` and `pxbp`. To install this in Mac or Linux
+
+1. Go to [https://github.com/FePhyFoFum/phyx][2] then click the “Clone or download” and download the zip. Unzip the resulting file. 
+2. Open the Terminal and change directory to the `src` directory (if you downloaded and unzipped the phyx-master.zip in your Downloads directory, on Mac you will probably run the command `cd Downloads/phyx-master/src`)
+3. Run `./configure`. You will get a couple errors, probably, but you can ignore. This would be important only if you needed all of the programs in `phyx`.
+4. Run `make pxlstr` and then `make pxbp`. Then copy the programs into your PATH (so probably `sudo cp pxlstr pxbp /usr/local/bin/`. You will have to type your password.
 
 ### Installing SortaDate
 This is trivial. Because the package is a python package, all you will need is to download the scripts here, and just run them directory from wherever you download them. You can see how to use the commands in the example below.
@@ -32,14 +37,15 @@ There is an example dataset included in the repository. This is a partial datase
 
 ## Additional analyses
 ### Rooting
-If you need trees to be rooted, you can perform this in many different ways. One way that you can root these trees is with `phyx` (found [https://github.com/FePhyFoFum/phyx][2]). 
+If you need trees to be rooted, you can perform this in many different ways. One way that you can root these trees is with `phyx` (found [https://github.com/FePhyFoFum/phyx][3]). 
 
 ### Conducting clock analyses
-If you would like to conduct likelihood ratio tests for the clock for each of the gene trees, you may do this with `paup` and you can find that here [http://people.sc.fsu.edu/\~dswofford/paup\_test/][3]. There are scripts included in `SortaDate` to conduct these analyses that will add the necessary paup block to the file.
+If you would like to conduct likelihood ratio tests for the clock for each of the gene trees, you may do this with `paup` and you can find that here [http://people.sc.fsu.edu/\~dswofford/paup\_test/][4]. There are scripts included in `SortaDate` to conduct these analyses that will add the necessary paup block to the file.
 
 ## Citations
 The scripts and procedures discussed here are presented in 
 
 [1]:	https://github.com/FePhyFoFum/phyx
 [2]:	https://github.com/FePhyFoFum/phyx
-[3]:	http://people.sc.fsu.edu/~dswofford/paup_test/
+[3]:	https://github.com/FePhyFoFum/phyx
+[4]:	http://people.sc.fsu.edu/~dswofford/paup_test/
