@@ -5,7 +5,7 @@ import argparse as ap
 
 flend = ".tre"
 outg = ""
-cmd1 = "pxrmt -t TREE -n "+outg+"| pxlstr"
+cmd1 = "pxrmt -t TREE -n OUTGROUP | pxlstr"
 cmd2 = "pxlstr -t TREE"
 writetofile = False
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     print "outgroups:",args.outgroups
     if args.outgroups != "":
         outg = args.outgroups
-        cmd = cmd1
+        cmd = cmd1.replace("OUTGROUP",outg)
     else:
         cmd = cmd2
     print "phyx location:",args.phyx_location
