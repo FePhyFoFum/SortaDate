@@ -51,7 +51,7 @@ If you need trees to be rooted, you can perform this in many different ways. One
 If you would like to conduct likelihood ratio tests for the clock for each of the gene trees, you may do this with `paup` and you can find that here [http://people.sc.fsu.edu/\~dswofford/paup\_test/][4]. There are scripts included in `SortaDate` to conduct these analyses that will add the necessary paup block to the file.
 
 ## Citations
-The scripts and procedures discussed here are presented in 
+The scripts and procedures discussed here are presented in Smith et al. So many genes, so little time: divergence-time estimation in the genomic era. submitted.
 
 [1]:	https://github.com/FePhyFoFum/phyx
 [2]:	https://github.com/FePhyFoFum/phyx
