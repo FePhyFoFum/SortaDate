@@ -63,6 +63,7 @@ if __name__ == "__main__":
                 if "TSCA:" in j:
                     break
                 if start:
+                    j = j.replace("CLADE: ","")
                     spls = set(j.strip().split("\t")[0].split(" "))
                     spls.remove("")
                     tf = spls in clades
