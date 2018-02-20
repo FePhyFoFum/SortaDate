@@ -48,7 +48,7 @@ There is an example dataset included in the repository. This is a partial datase
 If you need trees to be rooted, you can perform this in many different ways. One way that you can root these trees is with `phyx` (found [https://github.com/FePhyFoFum/phyx][3]). 
 
 ### Conducting clock analyses
-If you would like to conduct likelihood ratio tests for the clock for each of the gene trees, you may do this with `paup` and you can find that here [http://people.sc.fsu.edu/\~dswofford/paup\_test/][4]. There are scripts included in `SortaDate` to conduct these analyses that will add the necessary paup block to the file.
+If you would like to conduct likelihood ratio tests for the clock for each of the gene trees, you may do this with `paup` and you can find that here [http://phylosolutions.com/paup-test/][4]. There are scripts included in `SortaDate` to conduct these analyses that will add the necessary paup block to the file.
 
 ## Citations
 The scripts and procedures discussed here are presented in Smith et al. So many genes, so little time: divergence-time estimation in the genomic era. submitted.
@@ -56,4 +56,4 @@ The scripts and procedures discussed here are presented in Smith et al. So many 
 [1]:	https://github.com/FePhyFoFum/phyx
 [2]:	https://github.com/FePhyFoFum/phyx
 [3]:	https://github.com/FePhyFoFum/phyx
-[4]:	http://people.sc.fsu.edu/~dswofford/paup_test/
+[4]:	http://phylosolutions.com/paup-test/
