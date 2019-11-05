@@ -62,7 +62,7 @@ if __name__ == "__main__":
                     continue
                 if "TSCA:" in j:
                     break
-                if start:
+                if start and "CLADE" in j:
                     j = j.replace("CLADE: ","")
                     spls = set(j.strip().split("\t")[0].split(" "))
                     spls.remove("")

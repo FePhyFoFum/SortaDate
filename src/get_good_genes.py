@@ -35,7 +35,7 @@ if __name__ == "__main__":
         outf = open(args.outf,'w')
         
     tuples = []
-    inf = open(sys.argv[1],"r")
+    inf = open(args.comb_file[0],"r")
     for i in inf:
         spls = i.strip().split()
         tuples.append((spls[0],float(spls[1]),float(spls[2]),-float(spls[-1])))
