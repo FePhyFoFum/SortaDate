@@ -24,13 +24,13 @@ if __name__ == "__main__":
         third = int(od[2])
     
     
-    print "order:",ordd[first],ordd[second],ordd[third]
+    print ("order:",ordd[first],ordd[second],ordd[third])
 
     if args.max != None:
         maxn = int(args.max)
 
     if args.outf != None:
-        print "outfile:",args.outf
+        print ("outfile:",args.outf)
         writetofile = True
         outf = open(args.outf,'w')
         
@@ -42,12 +42,12 @@ if __name__ == "__main__":
     inf.close()
     list1 = sorted(tuples,key=operator.itemgetter(first,second,third))
     if writetofile == False:
-        print "name root-to-tip_var treelength bipartition"
+        print ("name root-to-tip_var treelength bipartition")
     elif writetofile == True:
         outf.write("name root-to-tip_var treelength bipartition\n")
     for i in list1[0:maxn]:
         if writetofile == False:
-            print i[0],i[1],i[2],float(abs(i[3]))
+            print (i[0],i[1],i[2],float(abs(i[3])))
         elif writetofile == True:
             outf.write(i[0]+" "+str(i[1])+" "+str(i[2])+ " " +str(float(abs(i[3])))+"\n")
     if writetofile == True:

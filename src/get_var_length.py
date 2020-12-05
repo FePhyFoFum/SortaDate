@@ -22,19 +22,19 @@ if __name__ == "__main__":
     if args.fileending != None:
         flend = args.fileending
     di = args.di[0]
-    print "directory:",di
-    print "file ending for trees:",flend
-    print "outgroups:",args.outgroups
+    print ("directory:",di)
+    print ("file ending for trees:",flend)
+    print ("outgroups:",args.outgroups)
     if args.outgroups != "":
         outg = args.outgroups
         cmd = cmd1.replace("OUTGROUP",outg)
     else:
         cmd = cmd2
-    print "phyx location:",args.phyx_location
+    print ("phyx location:",args.phyx_location)
     if args.phyx_location != "":
         cmd = args.phyx_location+"/"+cmd
     if args.outf != None:
-        print "outfile:",args.outf
+        print ("outfile:",args.outf)
         writetofile = True
         outf = open(args.outf,'w')
 
@@ -43,7 +43,7 @@ if __name__ == "__main__":
         if i[-len(flend):] == flend:
             fd = di+"/"+i
             p = subprocess.Popen(cmd.replace("TREE",fd),shell=True,stdout=subprocess.PIPE)
-            x = p.communicate()[0].split("\n")
+            x = p.communicate()[0].decode("utf-8").split("\n")
             var = ""
             tl = ""
             for j in x:
@@ -55,7 +55,7 @@ if __name__ == "__main__":
                 elif spls[0] == "rttipvar:":
                     var = spls[1]
             if writetofile == False:
-                print i+"\t"+var+"\t"+tl
+                print (i+"\t"+var+"\t"+tl)
             else:
                 outf.write(i+"\t"+var+"\t"+tl+"\n")
     if writetofile == True:

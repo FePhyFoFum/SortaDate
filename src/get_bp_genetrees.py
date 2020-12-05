@@ -31,19 +31,19 @@ if __name__ == "__main__":
     if args.fileending != None:
         flend = args.fileending
     di = args.di[0]
-    print "directory:",di
-    print "file ending for trees:",flend
+    print ("directory:",di)
+    print ("file ending for trees:",flend)
     spt = args.speciestree[0]
-    print "species tree:",spt
+    print ("species tree:",spt)
     st = open(spt,"r")
     tree = tree_reader.read_tree_string(st.readline())
     st.close()
     clades = get_clades(tree)
-    print "phyx location:",args.phyx_location
+    print ("phyx location:",args.phyx_location)
     if args.phyx_location != "":
         cmd = args.phyx_location+"/"+cmd
     if args.outf != None:
-        print "outfile:",args.outf
+        print ("outfile:",args.outf)
         writetofile = True
         outf = open(args.outf,'w')
     
@@ -51,7 +51,7 @@ if __name__ == "__main__":
         if i[-len(flend):] == flend:
             fd = di+"/"+i
             p = subprocess.Popen(cmd+fd,shell=True,stdout=subprocess.PIPE)
-            x = p.communicate()[0].split("\n")
+            x = p.communicate()[0].decode("utf-8").split("\n")
             var = ""
             tl = ""
             start = False
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                     if tf == True:
                         count += 1
             if writetofile == False:
-                print i+"\t"+str(count/float(len(clades)))
+                print (i+"\t"+str(count/float(len(clades))))
             else:
                 outf.write(i+"\t"+str(count/float(len(clades)))+"\n")
             #break

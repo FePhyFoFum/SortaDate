@@ -89,8 +89,3 @@ def read_tree_string(instr):
             index += 1
         nextchar = instr[index]
     return root
-
-if __name__ == "__main__":
-    s = "(a:3,(b:1e-05,c:1.3)int_|_and_33.5:5)root;"
-    n2 = read_tree_string(s)
-    print n2.get_newick_repr(True)

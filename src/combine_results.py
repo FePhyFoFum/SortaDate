@@ -13,7 +13,7 @@ if __name__ == "__main__":
     var = args.var_file[0]
     bp = args.bp_file[0]
     if args.outf != None:
-        print "outfile:",args.outf
+        print ("outfile:",args.outf)
         writetofile = True
         outf = open(args.outf,'w')
     inf1 = open(var,"r")
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     inf3.close()
     if writetofile == False:
         for i in fl:
-            print i+"\t"+"\t".join(fl[i])
+            print (i+"\t"+"\t".join(fl[i]))
     elif writetofile == True:
         for i in fl:
             outf.write(i+"\t"+"\t".join(fl[i])+"\n")
